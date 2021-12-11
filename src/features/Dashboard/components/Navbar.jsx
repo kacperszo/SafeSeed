@@ -5,7 +5,7 @@ import { BsChatLeftText } from "react-icons/bs";
 import { BiBook } from "react-icons/bi";
 
 export default function Navbar({page}) {
-    let [colorSearch, colorChat, colorProfessionals] = ["text-neutral-200", "text-neutral-200", "text-neutral-200"];
+    let [colorSearch, colorChat, colorProfessionals] = ["text-neutral-300", "text-neutral-300", "text-neutral-300"];
     colorSearch = page === "search" ? "text-white" : colorSearch;
     colorChat = page === "chat" ? "text-white" : colorChat;
     colorProfessionals = page === "professionals" ? "text-white" : colorProfessionals;
@@ -17,7 +17,7 @@ export default function Navbar({page}) {
                     <span>Search</span>
                 </a>
             </Link>
-            <Link href="/dashboard/chat" passHref>
+            <Link href="/dashboard/chat-list" passHref>
                 <a className={"flex flex-col items-center justify-center w-1/3 " + colorChat}>
                     <BsChatLeftText />
                     <span>Chat</span>
