@@ -27,11 +27,11 @@ export default function SearchPage() {
             </div>
             <Navbar page="search"/>
             <img
-                className="fixed -bottom-8 -right-28 scale-[0.75] rotate-[330deg]"
+                className="fixed -bottom-8 -right-28 scale-[0.75] max-h-screen"
                 src={LeafImg2.src}
                 alt="leaf"/>
             <img
-                className="fixed -left-36 top-44 scale-[0.85] rotate-[120deg]"
+                className="fixed -left-36 top-52 scale-[0.70] rotate-[120deg]"
                 src={LeafImg.src}
                 alt="another leaf"/>
         </div>
