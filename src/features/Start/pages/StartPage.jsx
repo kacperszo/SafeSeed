@@ -1,4 +1,4 @@
-import LeafImg from "../assets/leaves.png";
+import LeafImg from "../../../assets/leaves.png";
 import Link from "next/link";
 
 export default function StartPage() {
@@ -31,7 +31,7 @@ export default function StartPage() {
             <div className="p-4 pr-12 pl-12 absolute bottom-0 z-20 w-full">
                 <div className="bg-katowice backdrop-blur-lg bg-opacity-40 h-20 flex items-center rounded-lg p-8 w-full">
                     <span className="text-white font-semibold font-quirky">
-                        I'm a:
+                        I&amp;m a:
                     </span>
                     <select className="bg-transparent text-white ml-3">
                         <option className="text-black">User</option>
