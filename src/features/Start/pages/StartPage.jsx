@@ -24,9 +24,11 @@ export default function StartPage() {
                         Register
                     </a>
                 </Link>
-                <button className="p-3 hover:underline font-semibold text-deep-purple">
+                <Link href="/login" passHref>
+                <a className="p-3 hover:underline font-semibold text-deep-purple text-center">
                     Login
-                </button>
+                </a>
+                </Link>
             </div>
             <div className="p-4 pr-12 pl-12 absolute bottom-0 z-20 w-full">
                 <div className="bg-katowice backdrop-blur-lg bg-opacity-40 h-20 flex items-center rounded-lg p-8 w-full">

@@ -5,6 +5,7 @@ import { useUser } from "../../auth";
 import { loginUser } from "../api/registerApi";
 import FormButton from "../components/FormButton";
 import FormInput from "../components/FormInput";
+import LeafImg from "../../../assets/leaf-1.png"
 
 const LoginPage = () => {
     const router = useRouter();
@@ -13,7 +14,6 @@ const LoginPage = () => {
         onSuccess(data) {
             setToken(data.token);
             setUserData(data.user);
-            console.log(userData);
             router.push("/dash");
         },
     });
@@ -30,8 +30,8 @@ const LoginPage = () => {
                 <br /> see <span className="text-haps">you</span> back
             </h1>
             <p className="text-sm mt-2 w-3/4 text-katowice">
-                Cupidatat commodo qui deserunt minim ex laborum pariatur amet
-                dolore adipisicing non.
+            Log in to get access to your
+            conversations
             </p>
             <Formik
                 initialValues={{
@@ -51,7 +51,7 @@ const LoginPage = () => {
                     handleSubmit,
                 }) => (
                     <form
-                        className="mt-4 flex flex-1 flex-col space-y-2"
+                        className="relative z-20 mt-4 flex flex-1 flex-col space-y-2"
                         onSubmit={handleSubmit}
                     >
                         <FormInput
@@ -72,22 +72,16 @@ const LoginPage = () => {
                             value={values.password}
                             placeholder={"Please make sure its safe"}
                         />
-                        <div className="flex-1" />
-                        <div className="flex flex-col">
-                            <label className="space-x-2 mt-auto pb-4">
-                                <input type="checkbox" />
-                                <span className="text-katowice">
-                                    I accept the{" "}
-                                    <span className="underline">
-                                        Terms of service
-                                    </span>
-                                </span>
-                            </label>
-                            <FormButton label={"I'm ready"}></FormButton>
+                        <div className="flex flex-col pt-2">
+                            <FormButton label={"Log in"}></FormButton>
                         </div>
                     </form>
                 )}
             </Formik>
+            <img
+                className="fixed -bottom-20 -left-20 max-h-screen -scale-x-75 scale-75 z-0"
+                src={LeafImg.src}
+                alt="leaf"/>
         </div>
     );
 }
