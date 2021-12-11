@@ -90,12 +90,13 @@ const ChatPage = () => {
      ></input>
      <button
       onClick={(evt) => {
-       console.log(evt)
-       socket.current.emit('msgToServer', {
-        chatroomId: id,
-        userId: userData.id,
-        message: input,
-       })
+       if (input.length > 0) {
+        socket.current.emit('msgToServer', {
+         chatroomId: id,
+         userId: userData.id,
+         message: input,
+        })
+       }
       }}
       type="button"
       className="rounded-full w-12 h-12 bg-white flex justify-center items-center"
