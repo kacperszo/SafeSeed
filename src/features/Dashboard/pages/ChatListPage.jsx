@@ -2,10 +2,15 @@ import Navbar from "../components/Navbar";
 import Topbar from "../components/Topbar";
 import LeafImg from "../../../assets/leaf-1.png";
 import LeafImg2 from "../../../assets/leaf-2.png";
-import Card from "../components/Card";
 import ChatListCard from './../components/ChatListCard';
+import { useQuery } from 'react-query';
+import { getChatList } from "../api/chatApi";
 
 const ChatListPage = () => {
+    const {loading, data} = useQuery("chatlist", getChatList)
+
+    console.log(data)
+
     return <div className="flex flex-col h-screen h-max-screen bg-beige font-mont" >
         <Topbar/>
         <div className="p-4 text-deep-purple w-4/5 relative z-30">
