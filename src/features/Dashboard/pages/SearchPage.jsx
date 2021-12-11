@@ -1,8 +1,13 @@
 import Navbar from "../components/Navbar";
 import LeafImg from "../../../assets/leaves.png";
 import Topbar from "../components/Topbar";
+import { useQuery } from "react-query";
+import { getSimilarUsers } from "../api/searchApi";
+import ChatListCard from "../components/ChatListCard";
 
 export default function SearchPage() {
+    const {data,isLoading} = useQuery("similarusers",getSimilarUsers)
+
     return (
         <div className="bg-beige h-screen w-full font-mont max-h-screen flex flex-col">
             <Topbar/>
@@ -15,7 +20,9 @@ export default function SearchPage() {
                 </div>
             </div>
             <div className="flex-grow">
-
+                {!isLoading && data.map(({nickname,bio,id})=>{
+                    return <ChatListCard key={id} username={nickname} latestMessage={bio} />
+                })}
             </div>
             <Navbar page="search"/>
             <img

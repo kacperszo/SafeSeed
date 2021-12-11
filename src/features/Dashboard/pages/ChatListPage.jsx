@@ -17,6 +17,7 @@ const ChatListPage = () => {
             <p className="text-katowice font-medium">Labore do in elit minim proident aliqua tempor cupidatat deserunt.</p>
         </div>
         <div className="flex flex-col flex-grow w-full p-4 space-y-3 overflow-y-scroll" >
+            {!loading && JSON.stringify(data)}
             <ChatListCard username={"Grzegorz"} latestMessage={"Hejka co tam"} />
             <ChatListCard username={"Grzegorz"} latestMessage={"Hejka co tam"} />
             <ChatListCard username={"Grzegorz"} latestMessage={"Hejka co tam"} />

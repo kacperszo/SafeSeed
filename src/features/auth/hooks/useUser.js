@@ -1,6 +1,7 @@
 import create from "zustand";
+import { persist } from "zustand/middleware"
 
-const useUser = create(set => ({
+const useUser = create(persist(set => ({
     token: "",
     userData: {},
     setUserData: (data) => {
@@ -9,6 +10,8 @@ const useUser = create(set => ({
     setToken: (newToken) => {
         set({token: newToken})  
     }
-}))
+})), {
+    name: "safe-seed",
+})
 
 export default useUser
