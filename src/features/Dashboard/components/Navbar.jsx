@@ -6,7 +6,7 @@ import { BiBook } from "react-icons/bi";
 export default function Navbar({page}) {
     let [colorSearch, colorChat, colorProfessionals] = ["text-neutral-300", "text-neutral-300", "text-neutral-300"];
     colorSearch = page === "search" ? "text-white" : colorSearch;
-    colorChat = page === "chat" ? "text-white" : colorChat;
+    colorChat = page === "chat-list" ? "text-white" : colorChat;
     colorProfessionals = page === "professionals" ? "text-white" : colorProfessionals;
     return (
         <nav className="bg-relish/60 p-3 w-full flex align-center justify-evenly relative z-30 backdrop-blur-lg text-sm font-mont">
