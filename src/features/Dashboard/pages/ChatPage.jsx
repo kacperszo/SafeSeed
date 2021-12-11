@@ -14,7 +14,7 @@ import { useUser } from '../../auth'
 const ChatPage = () => {
  const router = useRouter()
  const { id } = router.query
- const socket = useRef(io('http://localhost:3000'))
+ const socket = useRef(io(backendUrl))
  const user = useUser()
  const [messages, setMessages] = useState([])
  const [input, setInput] = useState('')
@@ -39,7 +39,7 @@ const ChatPage = () => {
      })),
     ].reverse()
    )
-   socket.current = io('http://localhost:3000')
+   socket.current = io(backendUrl)
    socket.current.on(id, (msg) => {
     setMessages((old) => [
      {

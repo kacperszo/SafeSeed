@@ -21,4 +21,4 @@ const leaveChat = async (roomId) =>
   .post(`${backendUrl}/chatrooms/${roomId}`, {}, authHeaders())
   .then((res) => res.data)
 
-export { getChat, getChatList, createChat, leaveChat }
+export { getChat, getChatList, createChat, leaveChat, backendUrl }
