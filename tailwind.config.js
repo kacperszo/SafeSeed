@@ -12,6 +12,10 @@ module.exports = {
         "deep-purple": "#3E1741",
         "katowice": "#796C7A",
         "relish": "#0C442D"
+      },
+      fontFamily: {
+        "quirky": "noto-serif",
+        "inter": "Inter"
       }
     },
   },

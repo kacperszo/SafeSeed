@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css'
 export default function Home() {
   return (
     <div className={styles.container}>
-      <h1 className="text-2xl text-katowice">Hello</h1>
+      <h1 className="text-2xl text-deep-purple font-quirky font-black">SafeSeed</h1>
     </div>
   )
 }
