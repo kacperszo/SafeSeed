@@ -1,10 +1,22 @@
 import { Formik } from "formik";
 import { useRouter } from "next/router";
+import { useMutation } from "react-query";
+import { useUser } from "../../auth";
+import { registerUser } from "../api/registerApi";
 import FormButton from "../components/FormButton";
 import FormInput from "../components/FormInput";
 
 export default function RegisterPage() {
     const router = useRouter()
+    const {updateUser, setToken} = useUser()
+    const {mutate: registerMutate} = useMutation(registerUser)
+    const {mutate: loginMutate} = useMutation(loginUser, {
+        onSuccess(data){
+            setToken(data.token)
+            updateUser(data.user)
+            router.push("/register/trait")
+        }
+    })
 
     return (
         <div className="h-screen w-full bg-beige p-4 font-mont flex flex-col">

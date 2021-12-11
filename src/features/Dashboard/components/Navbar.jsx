@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { IconContext } from "react-icons";
 import { AiOutlineCompass } from "react-icons/ai";
 import { BsChatLeftText } from "react-icons/bs";
 import { BiBook } from "react-icons/bi";
