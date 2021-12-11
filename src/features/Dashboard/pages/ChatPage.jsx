@@ -30,7 +30,7 @@ const ChatPage = () => {
     ];
 
     return (
-        <div className="h-screen max-h-screen w-full bg-beige flex flex-col">
+        <div className="h-screen max-h-screen w-full bg-beige flex flex-col font-mont">
             <nav className="p-4 flex justify-between text-deep-purple">
                 <div className="flex items-center space-x-2 ">
                     <span className="text-xl">
