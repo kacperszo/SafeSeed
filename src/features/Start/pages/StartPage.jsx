@@ -1,4 +1,4 @@
-import LeafImg from "../../../assets/leaves.png";
+import LeafImg from "../../../assets/leaf-1.png";
 import Link from "next/link";
 
 export default function StartPage() {
