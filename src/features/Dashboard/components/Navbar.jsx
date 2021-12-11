@@ -10,22 +10,28 @@ export default function Navbar({page}) {
     colorChat = page === "chat" ? "text-white" : colorChat;
     colorProfessionals = page === "professionals" ? "text-white" : colorProfessionals;
     return (
-        <nav className="bg-relish/60 p-3 w-full flex align-center justify-evenly relative z-30 backdrop-blur-lg ">
-            <Link href="/dashboard/search" passHref>
+        <nav className="bg-relish/60 p-3 w-full flex align-center justify-evenly relative z-30 backdrop-blur-lg text-sm">
+            <Link href="/dash/" passHref>
                 <a className={ "flex flex-col items-center justify-center w-1/3 " + colorSearch}>
-                    <AiOutlineCompass className="" />
+                    <span className="text-2xl">
+                        <AiOutlineCompass className="" />
+                    </span>
                     <span>Search</span>
                 </a>
             </Link>
-            <Link href="/dashboard/chat-list" passHref>
+            <Link href="/dash/chat" passHref>
                 <a className={"flex flex-col items-center justify-center w-1/3 " + colorChat}>
-                    <BsChatLeftText />
+                    <span className="text-xl">
+                        <BsChatLeftText />
+                    </span>
                     <span>Chat</span>
                 </a>
             </Link>
-            <Link href="/dashboard/professionals" passHref>
+            <Link href="/dash/professionals" passHref>
                 <a className={"flex flex-col items-center justify-center w-1/3 " + colorProfessionals}>
-                    <BiBook />
+                    <span className="text-2xl">
+                        <BiBook />
+                    </span>
                     <span>Professionals</span>
                 </a>
             </Link>
