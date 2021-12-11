@@ -1,8 +1,11 @@
 import { Formik } from "formik";
+import { useRouter } from "next/router";
 import FormButton from "../components/FormButton";
 import FormInput from "../components/FormInput";
 
 export default function RegisterPage() {
+    const router = useRouter()
+
     return (
         <div className="h-screen w-full bg-beige p-4 font-mont flex flex-col">
             <div className="flex justify-center p-4">
@@ -24,7 +27,7 @@ export default function RegisterPage() {
                     password: "",
                 }}
                 onSubmit={(values) => {
-                    console.log(values);
+                    router.push("/register/trait")
                 }}
             >
                 {({

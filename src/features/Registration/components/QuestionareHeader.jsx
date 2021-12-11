@@ -2,7 +2,7 @@ import HeaderBg from "../assets/header-bg.png";
 
 const QuestionareHeader = ({ label, title, sidenote = "" }) => {
     return (
-        <div className="h-48 min-h-40 w-full relative overflow-hidden font-mont">
+        <div className="h-40 min-h-40 w-full relative overflow-hidden font-mont">
             <div className="relative h-full z-30 p-4 text-white flex flex-col items-start justify-center">
                 <p>{label}</p>
                 <h1 className="text-2xl font-black font-quirky mt-2 mb-2">
