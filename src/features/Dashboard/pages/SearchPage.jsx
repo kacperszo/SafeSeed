@@ -17,12 +17,12 @@ export default function SearchPage() {
                     <h1 className="text-3xl font-quirky font-black text-deep-purple mb-3">Discover some new <span className="text-haps">friends</span></h1>
                 </div>
                 <div className="text-katowice font-medium">
-                    We’ve chosen some people in a similar situation to you to help you go through these times. You’re stronger together!
+                    Chatting with people can help you heal. You’re stronger together!
                 </div>
             </div>
-            <div className="flex-grow p-4 space-y-4 overflow-y-scroll">
-                {!isLoading && data.map(({nickname,bio,id})=>{
-                    return <ChatListCard key={id} username={nickname} latestMessage={bio} />
+            <div className="flex flex-col flex-grow w-full p-4 space-y-3 overflow-y-scroll">
+                {!isLoading && data.map(({nickname, bio, id})=>{
+                    return <ChatListCard key={id} username={nickname} tagline={bio} />
                 })}
             </div>
             <Navbar page="search"/>
