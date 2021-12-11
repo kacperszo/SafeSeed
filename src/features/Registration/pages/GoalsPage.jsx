@@ -13,6 +13,7 @@ const GoalsPage = () => {
                 "
                 title="What would you like to achieve"
             />
+
             <div className="flex-1 flex flex-wrap overflow-y-scroll p-4 gap-4">
                 <FormCheckboxItem label={"Anxiety attacks"} />
                 <FormCheckboxItem label={"Anxiety attacks"} />
@@ -31,14 +32,13 @@ const GoalsPage = () => {
                         Something else:
                     </h2>
                     <textarea
+                        name="bio"
                         className="w-full p-4 h-full border border-deep-purple rounded-lg bg-transparent"
                         placeholder="Your dreams and wishes"
                     />
                 </div>
                 <div className="p-4">
-                    <FormButton onClick={()=>{
-                        router.push("/register/")
-                    }} label="Let’s start this journey" />
+                    <FormButton type="submit" label="Let’s start this journey" />
                 </div>
             </div>
         </div>
