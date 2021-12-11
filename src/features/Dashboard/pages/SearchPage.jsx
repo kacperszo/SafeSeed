@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
-import LeafImg from "../../../assets/leaves.png";
+import LeafImg from "../../../assets/leaf-1.png";
+import LeafImg2 from "../../../assets/leaf-2.png";
 import Topbar from "../components/Topbar";
 import { useQuery } from "react-query";
 import { getSimilarUsers } from "../api/searchApi";
@@ -26,11 +27,11 @@ export default function SearchPage() {
             </div>
             <Navbar page="search"/>
             <img
-                className="fixed -bottom-16 -right-16 z-10 scale-80"
-                src={LeafImg.src}
+                className="fixed -bottom-8 -right-28 scale-[0.75] rotate-[330deg]"
+                src={LeafImg2.src}
                 alt="leaf"/>
             <img
-                className="fixed bottom-8 -left-40 rotate-[120deg] z-10 scale-75"
+                className="fixed -left-36 top-44 scale-[0.85] rotate-[120deg]"
                 src={LeafImg.src}
                 alt="another leaf"/>
         </div>
