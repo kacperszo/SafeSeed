@@ -5,6 +5,7 @@ import { getNewNickname } from "../api/dashboardApi";
 import { useMutation } from "react-query";
 import { IoMdRefresh } from "react-icons/io";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function SettingsPage() {
     const { setUserData, setToken, userData, token } = useUser();
@@ -13,9 +14,16 @@ export default function SettingsPage() {
             setUserData({nickname: data.nickname})
         }
     })
+    const router = useRouter()
+
+    const logout = () => {
+        setUserData({})
+        setToken("")
+        router.push("/")
+    }
 
     return (
-        <div className="bg-beige h-screen w-full font-mont">
+        <div className="bg-beige h-screen w-full font-mont flex flex-col">
             <Topbar disabled />
             <div className="p-4">
                 <h1 className="text-3xl font-quirky font-black text-deep-purple mb-4 w-4/5">Change your <span className="text-haps">username</span></h1>
@@ -40,7 +48,12 @@ export default function SettingsPage() {
                     </a>
                 </Link>
             </div>
-            <div className="fixed bottom-0 w-full">
+            <div className="mt-auto flex justify-center pb-4">
+                <button onClick={logout} className="transition hover:text-govtech font-bold">
+                    Log out
+                </button>
+            </div>
+            <div className="w-full">
                 <Navbar page="none" />
             </div>
         </div>

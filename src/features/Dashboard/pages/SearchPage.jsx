@@ -20,7 +20,7 @@ export default function SearchPage() {
                     We’ve chosen some people in a similar situation to you to help you go through these times. You’re stronger together!
                 </div>
             </div>
-            <div className="flex-grow">
+            <div className="flex-grow p-4 space-y-4 overflow-y-scroll">
                 {!isLoading && data.map(({nickname,bio,id})=>{
                     return <ChatListCard key={id} username={nickname} latestMessage={bio} />
                 })}

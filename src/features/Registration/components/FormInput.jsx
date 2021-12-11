@@ -9,6 +9,8 @@ const FormInput = ({ onChange, name, value, type, label, placeholder }) => {
                 value={value}
                 type={type}
                 placeholder={placeholder}
+                minLength={8}
+                required
             />
         </label>
     );
