@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function StartPage() {
     return (
-        <div className="bg-beige h-screen w-full font-mont">
+        <div className="relative overflow-hidden bg-beige h-screen w-full font-mont">
             <div className="flex justify-center p-4">
                 <h1 className="text-2xl text-deep-purple font-quirky font-black">
                     SafeSeed

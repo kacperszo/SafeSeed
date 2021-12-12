@@ -13,7 +13,7 @@ export default function SearchPage() {
  const router = useRouter()
  const {} = useUser()
  return (
-  <div className="bg-beige h-screen w-full font-mont max-h-screen flex flex-col">
+  <div className="relative overflow-hidden bg-beige h-full w-full font-mont max-h-screen flex flex-col">
    <Topbar />
    <div className="w-4/5 p-4">
     <div>
@@ -45,12 +45,12 @@ export default function SearchPage() {
    </div>
    <Navbar page="search" />
    <img
-    className="fixed -bottom-8 -right-28 scale-[0.75] max-h-screen"
+    className="absolute -bottom-8 -right-28 scale-[0.75] max-h-screen select-none"
     src={LeafImg2.src}
     alt="leaf"
    />
    <img
-    className="fixed -left-36 top-52 scale-[0.70] rotate-[120deg]"
+    className="absolute -left-36 top-52 scale-[0.70] rotate-[120deg] select-none"
     src={LeafImg.src}
     alt="another leaf"
    />

@@ -11,7 +11,7 @@ const ProfessionalsPage = () => {
     const {data, isLoading} = useQuery("psychologists", getPsychologists)
 
     return (
-        <div className="bg-beige h-screen max-h-screen w-full flex flex-col font-mont">
+        <div className="relative overflow-hidden bg-beige h-full max-h-screen w-full flex flex-col font-mont">
             <Topbar/>
             <div className="p-4 text-deep-purple w-3/4 relative z-30">
                 <h1 className="text-3xl font-quirky font-black mb-3">Contact <span className="text-haps" >Professionals</span></h1>
@@ -24,11 +24,11 @@ const ProfessionalsPage = () => {
             </div>
             <Navbar/>
             <img
-                className="fixed -bottom-8 -right-28 scale-[0.75] max-h-screen"
+                className="absolute -bottom-8 -right-28 scale-[0.75] max-h-screen select-none"
                 src={LeafImg2.src}
                 alt="leaf"/>
             <img
-                className="fixed -left-36 top-52 scale-[0.70] rotate-[120deg]"
+                className="absolute -left-36 top-52 scale-[0.70] rotate-[120deg] select-none"
                 src={LeafImg.src}
                 alt="another leaf"/>
         </div>

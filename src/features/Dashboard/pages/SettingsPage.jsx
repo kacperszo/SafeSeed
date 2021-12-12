@@ -23,7 +23,7 @@ export default function SettingsPage() {
  }
 
  return (
-  <div className="bg-beige h-screen w-full font-mont flex flex-col">
+  <div className="bg-beige h-full w-full font-mont flex flex-col">
    <Topbar disabled />
    <div className="p-4">
     <h1 className="text-3xl font-quirky font-black text-deep-purple mb-4 w-4/5">
