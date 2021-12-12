@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function StartPage() {
     return (
-        <div className="relative overflow-hidden bg-beige h-screen w-full font-mont">
+        <div className="relative overflow-hidden bg-beige h-full w-full font-mont">
             <div className="flex justify-center p-4">
                 <h1 className="text-2xl text-deep-purple font-quirky font-black">
                     SafeSeed
@@ -30,17 +30,17 @@ export default function StartPage() {
                 </a>
                 </Link>
             </div>
-            <div className="p-4 pr-12 pl-12 absolute bottom-0 z-20 w-full">
-                <div className="bg-katowice backdrop-blur-lg bg-opacity-40 h-20 flex items-center rounded-lg p-8 w-full">
-                    <span className="text-white font-semibold font-quirky">
-                        I&apos;m a:
-                    </span>
-                    <select className="bg-transparent text-white ml-3">
-                        <option className="text-black">User</option>
-                        <option className="text-black">Psychologist</option>
-                    </select>
-                </div>
-            </div>
+            {/*<div className="p-4 pr-12 pl-12 absolute bottom-0 z-20 w-full">*/}
+            {/*    <div className="bg-katowice backdrop-blur-lg bg-opacity-40 h-20 flex items-center rounded-lg p-8 w-full">*/}
+            {/*        <span className="text-white font-semibold font-quirky">*/}
+            {/*            I&apos;m a:*/}
+            {/*        </span>*/}
+            {/*        <select className="bg-transparent text-white ml-3">*/}
+            {/*            <option className="text-black">User</option>*/}
+            {/*            <option className="text-black">Psychologist</option>*/}
+            {/*        </select>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
             <img
                 className="absolute bottom-0 right-0 z-10"
                 src={LeafImg.src}
