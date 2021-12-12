@@ -20,7 +20,7 @@ const GoalsPage = () => {
         },
     });
     return (
-        <div className="h-screen max-h-screen bg-beige w-full flex flex-col overflow-hidden">
+        <div className="h-full max-h-full bg-beige w-full flex flex-col overflow-hidden">
             <QuestionareHeader
                 label="Okay, now’s the 
                 good part

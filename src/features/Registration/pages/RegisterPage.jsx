@@ -20,7 +20,7 @@ export default function RegisterPage() {
     });
 
     return (
-        <div className="h-screen w-full bg-beige p-4 font-mont flex flex-col">
+        <div className="h-full w-full bg-beige p-4 font-mont flex flex-col">
             <div className="flex justify-center p-4">
                 <h1 className="text-2xl text-deep-purple font-quirky font-black">
                     SafeSeed
