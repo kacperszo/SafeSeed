@@ -10,7 +10,7 @@ const getChatList = async () =>
 
 const getChat = async (roomId) =>
  await axios
-  .get(`${backendUrl}chatrooms/${roomId}`, authHeaders())
+  .get(`${backendUrl}/chatrooms/${roomId}`, authHeaders())
   .then((res) => res.data)
 
 const createChat = async (userId) =>
