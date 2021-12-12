@@ -53,8 +53,8 @@ const TraitPage = () => {
                     handleSubmit,
                     handleChange
                 }) => (
-                    <form onSubmit={handleSubmit} className="flex-1 flex-col flex overflow-y-scroll" >
-                        <div className="flex-1 flex flex-wrap p-4 gap-4">
+                    <form onSubmit={handleSubmit} className="flex-1 flex-col flex overflow-hidden" >
+                        <div className="flex-1 flex flex-wrap p-4 gap-4 overflow-y-scroll">
                                 {data.map(({ name, id }) => (
                                     <FormCheckboxItem
                                         handleChange={handleChange}
