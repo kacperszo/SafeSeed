@@ -87,10 +87,22 @@ const ChatPage = () => {
       className="flex-grow rounded-full mr-2 pl-4 focus:ring-4 focus:outline-none"
       value={input}
       onChange={(e) => setInput(e.target.value)}
+      onKeyDown={(e) => {
+       if (e.key === 'Enter') {
+        e.preventDefault()
+        setInput('')
+        socket.current.emit('msgToServer', {
+         chatroomId: id,
+         userId: userData.id,
+         message: input,
+        })
+       }
+      }}
      ></input>
      <button
       onClick={(evt) => {
        if (input.length > 0) {
+        setInput('')
         socket.current.emit('msgToServer', {
          chatroomId: id,
          userId: userData.id,
