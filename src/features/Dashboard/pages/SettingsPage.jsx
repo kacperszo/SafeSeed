@@ -11,7 +11,7 @@ export default function SettingsPage() {
  const { setUserData, setToken, userData, token } = useUser()
  const { mutateAsync: nicknameMutate } = useMutation(getNewNickname, {
   onSuccess(data) {
-   setUserData({ nickname: data.nickname })
+   setUserData({ ...userData, nickname: data.nickname })
   },
  })
  const router = useRouter()
