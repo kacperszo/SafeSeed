@@ -42,7 +42,7 @@ export default function StartPage() {
             {/*    </div>*/}
             {/*</div>*/}
             <img
-                className="absolute bottom-0 right-0 z-10"
+                className="absolute -bottom-5 -right-5 z-10 scale-75"
                 src={LeafImg.src}
                 alt="test"
             />
