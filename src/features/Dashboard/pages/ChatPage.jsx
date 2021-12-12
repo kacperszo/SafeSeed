@@ -60,7 +60,7 @@ const ChatPage = () => {
    <nav className="p-4 flex justify-between text-deep-purple">
     <div className="flex items-center space-x-2 ">
      <span className="text-xl">
-      <AiOutlineArrowLeft />
+      <AiOutlineArrowLeft onClick={() => router.push('/dash/chat')} />
      </span>
      <h2 className="font-quirky font-black text-2xl">{conversationTitle}</h2>
     </div>

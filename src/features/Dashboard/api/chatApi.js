@@ -14,7 +14,9 @@ const getChat = async (roomId) =>
   .then((res) => res.data)
 
 const createChat = async (userId) =>
- await axios.post(`${backendUrl}/`, {}, authHeaders()).then((res) => res.data)
+ await axios
+  .post(`${backendUrl}/chatrooms/${userId}`, {}, authHeaders())
+  .then((res) => res.data)
 
 const leaveChat = async (roomId) =>
  await axios
