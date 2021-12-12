@@ -13,9 +13,11 @@ function MyApp({ Component, pageProps }) {
     });
 
     return (
-        <QueryClientProvider client={queryClient}>
-            <Component {...pageProps} />
-        </QueryClientProvider>
+        <div id="main-wrapper" className="overflow-hidden">
+            <QueryClientProvider client={queryClient}>
+                <Component {...pageProps} />
+            </QueryClientProvider>
+        </div>
     );
 }
 
