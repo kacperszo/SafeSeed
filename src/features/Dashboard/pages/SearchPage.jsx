@@ -7,9 +7,11 @@ import { getSimilarUsers } from '../api/searchApi'
 import ChatListCard from '../components/ChatListCard'
 import { backendUrl, createChat } from '../api/chatApi'
 import { useRouter } from 'next/router'
+import { useUser } from '../../auth'
 export default function SearchPage() {
  const { data, isLoading } = useQuery('similarusers', getSimilarUsers)
  const router = useRouter()
+ const {} = useUser()
  return (
   <div className="bg-beige h-screen w-full font-mont max-h-screen flex flex-col">
    <Topbar />
